@@ -11,7 +11,221 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>HTML Form</h1>
     <script type="text/javascript" src="./main.js"></script>
+    <form action="http://localhost:8080/" method="post">
+      <fieldset class="field-set">
+        <legend>
+            Personal information
+        </legend>
+        <div class="field">
+          <label for="surname">
+                Surname:
+          </label>
+          <input
+              type="text"
+              name="surname"
+              id="surname"
+              autocomplete="off"
+          >
+        </div> 
+        <div class="field">
+          <label
+              for="name">
+                Name:
+          </label>
+          <input
+              type="text"
+              name="name"
+              id="name"
+              autocomplete="off"
+          >
+        </div>
+        <div class="field">
+          <label for="age">
+                How old are You?
+          </label>
+          <input 
+              type="number"
+              name="age"
+              id="age"
+              min="1"
+              max="100"
+              value="12"
+              autocomplete="off"
+          >  
+        </div>
+        <div class="field">
+          <label for="date">
+                Full date of birth:
+          </label>
+          <input
+              name="dateOfBirth"
+              type="date"
+              id="date"
+              autocomplete="off"
+          >
+        </div>
+        <div>
+          <label for="accept">
+                I accept the term of the agreement
+          </label>
+          <input          
+              type="checkbox"
+              id="accept"
+              autocomplete="off"
+          >
+        </div>           
+      </fieldset>
+      <fieldset class="field-set">
+        <legend>
+          Registration
+        </legend>
+        <div class="field">
+          <label for="email">
+              E-mail:
+          </label>
+          <input
+              name="email"
+              type="email"
+              id="email"
+              placeholder="email@example.com"
+              autocomplete="off"
+          >
+        </div>
+        <div>
+          <label for="password">
+              Password:
+          </label>
+          <input
+              name="password"
+              minlength="4"
+              maxlength="10"
+              id="password"
+              type="password"
+              autocomplete="off"
+          >
+        </div>          
+      </fieldset>
+      <fieldset class="field-set">
+        <legend>
+            An interesting fact about you!
+        </legend>
+        <div class="field">
+            Do you love cats?                
+          <input
+              type="radio"
+              name="yes"
+              id="yes"
+          >
+          <label for="yes">
+                Yes
+          </label>
+          <input
+              type="radio"
+              name="no"
+              id="no"
+          >
+          <label for="no">
+                No
+          </label>
+        </div>
+        <div class="field">
+          <label for="color">
+              What is your favorite color?
+          </label>
+          <input
+              type="color"
+              name="color"
+              id="color"
+          >
+        </div> 
+        <div class="field">
+          <label for="time">
+              What time do you go to bed?
+          </label>
+          <input
+              type="time"
+              name="timeToBed"
+              id="time"
+              autocomplete="off"
+          >
+        </div> 
+        <div class="field">
+          <label for="cars">
+              What are the favorite brand of cars?
+          </label>
+          <select         
+             name="cars"
+             id="cars"
+             required multiple
+          >
+            <option>
+              BMW
+            </option>
+            <option>
+              Audi
+            </option>
+            <option>
+              Lada
+            </option>
+          </select>
+        </div> 
+        <div>
+          <label for="range">
+              How do you rate our work?
+          </label>
+          <input
+              name="rateOfWork"
+              type="range"
+              id="range"
+              value = "0"
+          >
+        </div>           
+      </fieldset> 
+      <fieldset 
+        class="field-set"       
+        name="addInfo">
+        <legend>
+           Additional info
+        </legend> 
+        <div class="field">
+          <label
+            for="comments"
+          >
+           Comments:
+          </label>
+          <textarea
+           name="comments"
+           id="comments"
+           cols="20"
+           rows="2"
+           autocomplete="off"
+          >
+          </textarea>
+        </div>
+        <div>
+          <label for="recommend">
+              Would you recommend us?
+          </label>
+          <select
+              name="recommends"
+              id="recommend"
+          >
+            <option>
+              yes
+            </option>
+            <option>
+              no
+            </option>
+          </select>
+        </div>        
+      </fieldset> 
+      <button
+      type="submit"       
+      >
+      Submit
+      </button>     
+    </form>    
   </body>
 </html>
+  
